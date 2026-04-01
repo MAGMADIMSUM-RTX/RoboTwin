@@ -14,6 +14,7 @@ class place_can_basket(Base_Task):
 
         self.basket_name = "110_basket"
         self.basket_id = [0, 1][np.random.randint(0, 2)]
+        print(f"Basket model ID initialized: {self.basket_id}")
 
         can_dict = {
             "071_can": [0, 1, 2, 3, 5, 6],
@@ -30,6 +31,8 @@ class place_can_basket(Base_Task):
                 ylim=[-0.08, -0.05],
                 qpos=[0.5, 0.5, 0.5, 0.5],
                 convex=True,
+                # convex=False,
+                # is_static=True,
             )
             self.can = rand_create_actor(
                 scene=self,

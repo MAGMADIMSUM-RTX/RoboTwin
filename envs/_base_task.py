@@ -72,7 +72,9 @@ class Base_Task(gym.Env):
         self.need_topp = True  # TODO
 
         # Random
-        random_setting = kwags.get("domain_randomization")
+        random_setting = kwags.get("domain_randomization", {})
+        if random_setting is None:
+            random_setting = {}
         self.random_background = random_setting.get("random_background", False)
         self.cluttered_table = random_setting.get("cluttered_table", False)
         self.clean_background_rate = random_setting.get("clean_background_rate", 1)
