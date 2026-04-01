@@ -12,16 +12,16 @@ class click_bell(Base_Task):
 
     def load_actors(self):
         rand_pos = rand_pose(
-            xlim=[-0.25, 0.25],
+            xlim=[-0.35, -0.10],
             ylim=[-0.2, 0.0],
             qpos=[0.5, 0.5, 0.5, 0.5],
         )
-        while abs(rand_pos.p[0]) < 0.05:
-            rand_pos = rand_pose(
-                xlim=[-0.25, 0.25],
-                ylim=[-0.2, 0.0],
-                qpos=[0.5, 0.5, 0.5, 0.5],
-            )
+        # while abs(rand_pos.p[0]) < 0.05:
+        #     rand_pos = rand_pose(
+        #         xlim=[-0.35, -0.1],
+        #         ylim=[-0.2, 0.0],
+        #         qpos=[0.5, 0.5, 0.5, 0.5],
+        #     )
 
         self.bell_id = np.random.choice([0, 1], 1)[0]
         self.bell = create_actor(
@@ -38,7 +38,7 @@ class click_bell(Base_Task):
     
     def play_once(self):
         # Choose the arm to use: right arm if the bell is on the right side (positive x), left otherwise
-        arm_tag = ArmTag("right" if self.bell.get_pose().p[0] > 0 else "left")
+        arm_tag = ArmTag("left")
     
         # Move the gripper above the top center of the bell and close the gripper to simulate a click
         # Note: grasp_actor here is not used to grasp the bell, but to simulate a touch/click action

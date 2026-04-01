@@ -81,7 +81,43 @@ def pkl_files_to_hdf5_and_video(pkl_files, hdf5_path, video_path):
         pkl_file = load_pkl_file(pkl_file_path)
         append_data_to_structure(data_list, pkl_file)
 
-    images_to_video(np.array(data_list["observation"]["head_camera"]["rgb"]), out_path=video_path)
+    # images_to_video(np.array(data_list["observation"]["head_camera"]["rgb"]), out_path=video_path)
+    
+    # 解析 video_path 获取基础目录和文件名
+    # video_path 类似于 /path/to/save/video/episode0.mp4
+    video_dir = os.path.dirname(video_path)
+    video_filename = os.path.basename(video_path)
+
+    # Save video for each camera in observation
+    if "observation" in data_list:
+        for cam_name, cam_data in data_list["observation"].items():
+            if isinstance(cam_data, dict) and "rgb" in cam_data:
+                # 为每个相机创建一个子文件夹
+                cam_dir = os.path.join(video_dir, cam_name)
+                os.makedirs(cam_dir, exist_ok=True)
+                
+                # 视频路径：/path/to/save/video/{cam_name}/episode0.mp4
+                current_video_path = os.path.join(cam_dir, video_filename)
+                
+                print(f"Generating video for {cam_name} at {current_video_path}...")
+                try:
+                    images_to_video(np.array(cam_data["rgb"]), out_path=current_video_path)
+                except Exception as e:
+                    print(f"Failed to generate video for {cam_name}: {e}")
+
+    # Save video for third_view if exists
+    if "third_view_rgb" in data_list:
+        # 为 third_view 创建子文件夹
+        cam_dir = os.path.join(video_dir, "third_view")
+        os.makedirs(cam_dir, exist_ok=True)
+        
+        current_video_path = os.path.join(cam_dir, video_filename)
+        
+        print(f"Generating video for third_view at {current_video_path}...")
+        try:
+            images_to_video(np.array(data_list["third_view_rgb"]), out_path=current_video_path)
+        except Exception as e:
+            print(f"Failed to generate video for third_view: {e}")
 
     with h5py.File(hdf5_path, "w") as f:
         create_hdf5_from_dict(f, data_list)

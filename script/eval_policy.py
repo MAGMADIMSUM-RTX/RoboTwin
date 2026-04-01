@@ -1,3 +1,7 @@
+import jax
+import jax.numpy as jnp
+_ = jnp.zeros(1) + 1  
+
 import sys
 import os
 import subprocess
@@ -159,7 +163,7 @@ def main(usr_args):
 
     st_seed = 100000 * (1 + seed)
     suc_nums = []
-    test_num = 100
+    test_num = usr_args.get("test_num", 100)
     topk = 1
 
     model = get_model(usr_args)
@@ -233,10 +237,10 @@ def eval_policy(task_name,
                 args["render_freq"] = render_freq
                 continue
             except Exception as e:
-                # stack_trace = traceback.format_exc()
-                # print(" -------------")
-                # print("Error: ", e)
-                # print(" -------------")
+                stack_trace = traceback.format_exc()
+                print(" -------------")
+                print("Error: ", e)
+                print(" -------------")
                 TASK_ENV.close_env()
                 now_seed += 1
                 args["render_freq"] = render_freq

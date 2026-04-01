@@ -18,8 +18,8 @@ class adjust_bottle(Base_Task):
 
         self.bottle = rand_create_actor(
             self,
-            xlim=xlims[self.qpose_tag],
-            ylim=[-0.13, -0.08],
+            xlim=[0.25, 0.45],
+            ylim=[-0.10, -0.02],
             zlim=[0.752],
             rotate_rand=True,
             qpos=qposes[self.qpose_tag],

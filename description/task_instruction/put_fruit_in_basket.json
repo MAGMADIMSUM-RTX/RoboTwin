@@ -1,0 +1,29 @@
+{
+  "full_description": "use the mechanical arm to pick up the fruit and place it into the basket.",
+  "schema": "{A} notifies the fruit, {B} notifies the basket, {a} notifies the arm.",
+  "preference": "num of words should not exceed 10. Degree of detail avg is six.",
+  "seen": [
+    "Use {a} to pick up {A} and put it into {B}.",
+    "Pick up {A} and place it in {B}.",
+    "Grab {A} with {a} and drop it into {B}.",
+    "Put {A} into {B} using {a}.",
+    "Lift {A} and place it inside {B}.",
+    "Take {A} and put it in {B}.",
+    "Use {a} to grasp {A} and move it to {B}.",
+    "Pick {A} and drop it in {B}.",
+    "Move {A} into {B} with {a}.",
+    "Place {A} in {B}."
+  ],
+  "unseen": [
+    "Grasp {A} and deposit it into {B}.",
+    "Transport {A} to {B} using {a}.",
+    "Secure {A} and place it within {B}.",
+    "Use {a} to lift {A} into {B}.",
+    "Pick {A} up and set it in {B}.",
+    "Put {A} inside {B}.",
+    "Move {A} to {B}.",
+    "Transfer {A} into {B}.",
+    "Place {A} into the basket {B}.",
+    "Drop {A} in {B}."
+  ]
+}

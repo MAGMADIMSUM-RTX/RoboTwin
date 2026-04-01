@@ -16,11 +16,11 @@ class open_laptop(Base_Task):
             scene=self,
             modelname=self.model_name,
             modelid=self.model_id,
-            xlim=[-0.05, 0.05],
-            ylim=[-0.1, 0.05],
+            xlim=[-0.35, -0.15],
+            ylim=[-0.02, 0.10],
             rotate_rand=True,
             rotate_lim=[0, 0, np.pi / 3],
-            qpos=[0.7, 0, 0, 0.7],
+            qpos=[0.7071067811865476, 0, 0, 0.7071067811865476],
             fix_root_link=True,
         )
         limit = self.laptop.get_qlimits()[0]
@@ -30,8 +30,9 @@ class open_laptop(Base_Task):
         self.add_prohibit_area(self.laptop, padding=0.1)
 
     def play_once(self):
+        # Force using left arm only
         face_prod = get_face_prod(self.laptop.get_pose().q, [1, 0, 0], [1, 0, 0])
-        arm_tag = ArmTag("left" if face_prod > 0 else "right")
+        arm_tag = ArmTag("left")
         self.arm_tag = arm_tag
 
         # Grasp the laptop
