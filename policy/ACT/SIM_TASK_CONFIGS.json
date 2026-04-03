@@ -8,5 +8,195 @@
             "cam_right_wrist",
             "cam_left_wrist"
         ]
+    },
+    "sim-adjust_bottle_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-adjust_bottle_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-click_alarmclock_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-click_alarmclock_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-click_alarmclock_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-click_alarmclock_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-move_pillbottle_pad_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-move_pillbottle_pad_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-move_pillbottle_pad_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-move_pillbottle_pad_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-open_laptop_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-open_laptop_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-open_laptop_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-open_laptop_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-place_can_basket_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-place_can_basket_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-place_can_basket_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-place_can_basket_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-place_container_plate_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-place_container_plate_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-place_container_plate_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-place_container_plate_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-place_phone_stand_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-place_phone_stand_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-place_phone_stand_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-place_phone_stand_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-rotate_qrcode_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-rotate_qrcode_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-rotate_qrcode_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-rotate_qrcode_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-stamp_seal_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-stamp_seal_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-stamp_seal_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-stamp_seal_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-turn_switch_left-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-turn_switch_left/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
+    },
+    "sim-turn_switch_right-RoboTwin_aloha-100": {
+        "dataset_dir": "./processed_data/sim-turn_switch_right/RoboTwin_aloha-100",
+        "num_episodes": 100,
+        "episode_len": 1000,
+        "camera_names": [
+            "cam_high",
+            "cam_right_wrist",
+            "cam_left_wrist"
+        ]
     }
 }
